@@ -1,26 +1,27 @@
 /// <reference path="../pb_data/types.d.ts" />
 migrate((db) => {
   const collection = new Collection({
-    "id": "t2g2bwqd1ng19rp",
-    "created": "2023-10-01 06:42:17.178Z",
-    "updated": "2023-10-01 06:42:17.178Z",
-    "name": "chat_logs",
+    "id": "icgarndolopozdt",
+    "created": "2024-06-26 13:08:21.434Z",
+    "updated": "2024-06-26 13:08:21.434Z",
+    "name": "guild",
     "type": "base",
     "system": false,
     "schema": [
       {
         "system": false,
-        "id": "181wuhma",
-        "name": "messages",
+        "id": "gfjbfy5w",
+        "name": "confess",
         "type": "relation",
         "required": false,
+        "presentable": false,
         "unique": false,
         "options": {
-          "collectionId": "p76nfjfu5hh7xbk",
+          "collectionId": "b4uwb29c20ai31r",
           "cascadeDelete": false,
           "minSelect": null,
-          "maxSelect": null,
-          "displayFields": []
+          "maxSelect": 1,
+          "displayFields": null
         }
       }
     ],
@@ -36,7 +37,7 @@ migrate((db) => {
   return Dao(db).saveCollection(collection);
 }, (db) => {
   const dao = new Dao(db);
-  const collection = dao.findCollectionByNameOrId("t2g2bwqd1ng19rp");
+  const collection = dao.findCollectionByNameOrId("icgarndolopozdt");
 
   return dao.deleteCollection(collection);
 })

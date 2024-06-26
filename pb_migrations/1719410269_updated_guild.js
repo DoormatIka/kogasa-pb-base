@@ -1,7 +1,7 @@
 /// <reference path="../pb_data/types.d.ts" />
 migrate((db) => {
   const dao = new Dao(db)
-  const collection = dao.findCollectionByNameOrId("84mb8ygwn5zt7kn")
+  const collection = dao.findCollectionByNameOrId("icgarndolopozdt")
 
   collection.listRule = ""
   collection.viewRule = ""
@@ -12,7 +12,7 @@ migrate((db) => {
   return dao.saveCollection(collection)
 }, (db) => {
   const dao = new Dao(db)
-  const collection = dao.findCollectionByNameOrId("84mb8ygwn5zt7kn")
+  const collection = dao.findCollectionByNameOrId("icgarndolopozdt")
 
   collection.listRule = null
   collection.viewRule = null
